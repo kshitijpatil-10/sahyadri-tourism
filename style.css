@@ -1,0 +1,215 @@
+/* --- GLOBAL SETTINGS --- */
+html {
+    scroll-behavior: smooth; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./Sassets/S1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+/* --- NAVBAR --- */
+nav {
+    height: 80px;
+    width: 100%;
+    background-color: rgba(41, 120, 54, 0.95);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mini-logo {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+nav a:hover, nav a.active {
+    color: #00d4ff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- HERO SECTION --- */
+.hero-text {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    padding: 0 50px;
+}
+
+.hero-png {
+    height: 400px; 
+    width: auto;
+    margin-right: 40px;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.5));
+    animation: zoomIn 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.text-wrap h1 { font-size: 55px; margin-bottom: 10px; }
+.text-wrap p { font-size: 24px; opacity: 0.9; line-height: 1.4; }
+
+/* --- DESTINATIONS GRID SECTION --- */
+.content-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 35px; 
+    scroll-margin-top: 80px; 
+}
+
+.place-box {
+    background-color: white;
+    border-radius: 20px; 
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.place-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.place-box h2 {
+    color: #297836;
+    font-size: 20px;
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+.place-img {
+    width: 100%;
+    height: 190px; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.place-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* --- ABOUT US SECTION (Glassmorphism Look) --- */
+.about-section {
+    padding: 100px 5%;
+    /* पारदर्शक बॅकग्राउंड ज्यामुळे मागे फोटो दिसेल */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-align: center;
+    scroll-margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-section h1 {
+    color: white; /* मजकूर पांढरा केला आहे */
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    font-size: 45px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-box {
+    padding: 40px 30px;
+    /* बॉक्स सुद्धा थोडे काचेसारखे वाटतील */
+    background: rgba(255, 255, 255, 0.92); 
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 6px solid #297836; 
+    transition: 0.3s ease-in-out;
+}
+
+.about-box:hover {
+    transform: translateY(-10px);
+    background: white;
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+    color: #297836; /* बॉक्समधील हेडिंग हिरवे */
+    font-size: 24px;
+}
+
+.about-box p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* --- FOOTER --- */
+.mini-footer {
+    background: rgba(41, 120, 54, 0.95);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) { 
+    .hero-text { flex-direction: column; text-align: center; padding: 100px 20px; } 
+    .hero-png { margin-right: 0; margin-bottom: 30px; height: 300px; }
+    .text-wrap h1 { font-size: 40px; }
+}
+
+@media (max-width: 600px) { 
+    nav a { font-size: 14px; padding: 5px; }
+    .hero-png { height: 220px; }
+    .content-container { padding: 40px 20px; }
+    .about-section h1 { font-size: 32px; }
+}

@@ -1,0 +1,104 @@
+/* --- MINIMAL ENGLISH LOGIN STYLES --- */
+
+body {
+    background-image: url("./Sassets/S1.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-wrapper {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #297836;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #297836;
+    box-shadow: 0 0 5px rgba(41, 120, 54, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #297836;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: #1e5a28;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+.login-footer a {
+    color: #297836;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media (max-width: 450px) {
+    .login-box { width: 85%; }
+}
+.mini-footer {
+    background: rgba(41, 120, 54, 0.95);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

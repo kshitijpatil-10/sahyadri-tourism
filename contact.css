@@ -1,0 +1,170 @@
+/* --- BRIGHT & MINIMAL CONTACT STYLES (Matched with Index) --- */
+
+/* १. बॅकग्राउंड इमेज (Same as Index) */
+body {
+    background-image: url("./Sassets/S1.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* २. ब्राइट ओव्हरले (Removing Dark Overlay) */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Bright Frosted Effect like Index/Gallery */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: -1;
+}
+
+/* ३. मुख्य कंटेनर (The Glass Box) */
+.contact-wrapper {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.contact-container {
+    background: white; /* शुद्ध पांढरा डब्बा ज्यामुळे ब्राइटनेस वाढेल */
+    display: flex;
+    max-width: 950px;
+    width: 100%;
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* ४. डावा हिस्सा (Get in Touch - Sahyadri Green) */
+.contact-info {
+    background: #297836; 
+    color: white;
+    padding: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+/* ५. आयकॉन्स स्टाईल */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.info-item span {
+    font-size: 20px;
+    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* ६. उजवा हिस्सा (Form - Bright & Clean) */
+.contact-form {
+    padding: 50px;
+    width: 60%;
+    background: #ffffff;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333; /* Dark text for better readability on white */
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: #f9f9f9; /* हलका राखाडी रंग */
+    border: 1px solid #eee;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    border-color: #297836;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(41, 120, 54, 0.1);
+}
+
+/* ७. सेंड मेसेज बटण */
+.contact-btn {
+    width: 100%;
+    padding: 15px;
+    background: #297836;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+.contact-btn:hover {
+    background: #1e5a28;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(41, 120, 54, 0.3);
+}
+
+/* ८. मोबाईलसाठी अलाईन्मेंट */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .contact-info, .contact-form {
+        width: 100%;
+        padding: 40px 25px;
+    }
+}
+.mini-footer {
+    background: rgba(41, 120, 54, 0.95);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
